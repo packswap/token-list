@@ -1,0 +1,10 @@
+{
+  "address": "0xD19d2Ffb1c284668b7AFe72cddae1BAF3Bc03925",
+  "name": "USD Coin",
+  "symbol": "USDC",
+  "decimals": 18,
+  "tags": [
+    "stablecoin"
+  ],
+  "logoSource": "cryptocurrency-icons 0.18.1, CC0-1.0"
+}

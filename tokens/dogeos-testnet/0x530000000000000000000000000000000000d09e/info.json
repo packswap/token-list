@@ -1,0 +1,10 @@
+{
+  "address": "0x530000000000000000000000000000000000d09e",
+  "name": "Dogecoin",
+  "symbol": "DOGE",
+  "decimals": 18,
+  "tags": [
+    "native"
+  ],
+  "logoSource": "cryptocurrency-icons 0.18.1, CC0-1.0"
+}

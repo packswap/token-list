@@ -1,0 +1,10 @@
+{
+  "address": "0x25D5E5375e01Ed39Dc856bDCA5040417fD45eA3F",
+  "name": "World Liberty Financial USD",
+  "symbol": "USD1",
+  "decimals": 18,
+  "tags": [
+    "stablecoin"
+  ],
+  "logoSource": "Trust Wallet assets, MIT, as submitted there for this token. The mark is its project's."
+}

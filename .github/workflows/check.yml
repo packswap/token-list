@@ -1,0 +1,41 @@
+name: check
+
+# Pull requests come from anyone. This runs with `pull_request`, never `pull_request_target`: a
+# read-only token and no secrets, so a hostile change to this file has nothing to steal. Whoever
+# reviews a request reads its whole diff: a request only ever changes its token's folder.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: token list
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Actions are pinned to commits: a moved tag cannot change what runs here.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: node --test scripts/check.test.mjs
+      - name: Check a request
+        if: github.event_name == 'pull_request'
+        run: node scripts/check.mjs --base "origin/$BASE"
+        env:
+          BASE: ${{ github.base_ref }}
+      - name: Check the list
+        if: github.event_name == 'push'
+        run: node scripts/check.mjs

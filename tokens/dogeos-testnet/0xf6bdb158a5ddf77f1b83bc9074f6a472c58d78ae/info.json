@@ -1,0 +1,10 @@
+{
+  "address": "0xF6BDB158A5ddF77F1B83bC9074F6a472c58D78aE",
+  "name": "Wrapped Doge",
+  "symbol": "WDOGE",
+  "decimals": 18,
+  "tags": [
+    "wrapped"
+  ],
+  "logoSource": "cryptocurrency-icons 0.18.1, CC0-1.0: the DOGE logo inside a darker ring"
+}
