@@ -1,0 +1,10 @@
+{
+  "address": "0xC81800b77D91391Ef03d7868cB81204E753093a9",
+  "name": "Tether",
+  "symbol": "USDT",
+  "decimals": 18,
+  "tags": [
+    "stablecoin"
+  ],
+  "logoSource": "cryptocurrency-icons 0.18.1, CC0-1.0"
+}
